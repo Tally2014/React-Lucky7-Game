@@ -11,10 +11,9 @@ function getRolls(n){
 }
 
 /* Get sum of nums. */
+function sum(nums){
+    return nums.reduce((prev, cur) => prev + cur, 0);
+}
 
 
-/* Gets random interger: [1..6]. */
-
-
-
-/* Gets random interger: [1..6]. */
+export {d6, getRolls, sum};
