@@ -1,6 +1,7 @@
 import Dice from "./Dice"
 import {useState} from 'react';
 import { getRolls } from "./utils";
+import Button from "./Button";
 
 export default function LuckyN({title="LuckyN",numDice=2, winCheck}) {
     const [dice, setDice] = useState(getRolls(numDice));
@@ -12,7 +13,8 @@ export default function LuckyN({title="LuckyN",numDice=2, winCheck}) {
     <main className="LuckyN">
         <h1>{title} {isWinner && "- You Win!"}</h1>
         <Dice dice={dice}/>
-        <button onClick={roll}>Re-Roll Dice</button>
+        {/*<button onClick={roll}>Re-Roll Dice</button>*/}
+        <Button clickFunc={roll} label={'Re-Roll'}/>
     </main>
   )
 }
